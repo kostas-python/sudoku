@@ -195,7 +195,6 @@ export default function Sudoku() {
   const checkIfSolved = (newBoard: number[][]) => {
     if (newBoard.every((row) => row.every((cell) => cell !== 0))) {
       setIsSolved(true);
-      alert("Congratulations! You solved the Sudoku!");
     }
   };
 
@@ -273,7 +272,7 @@ export default function Sudoku() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-6 bg-gradient-to-b from-green-800 via-gray-700 to-black">
       <h1 className="text-xl md:text-3xl font-bold mb-4 text-gray-200 text-center">Sudoku Game</h1>
-      {isSolved && <p className="text-green-400 font-bold">Congratulations! You solved the Sudoku!</p>}
+      {isSolved && <p className="text-green-400 mb-4 text-lg tracking-wide font-bold">Congratulations! You solved the Sudoku!</p>}
 
 
       {/* Difficulty selection buttons */}
